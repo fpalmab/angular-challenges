@@ -5,10 +5,11 @@ import {
   studentsFeatureKey,
 } from './student.reducer';
 
+export const { selectIds, selectEntities, selectAll, selectTotal } =
+  studentAdapter.getSelectors();
+
 const selectStudentState =
   createFeatureSelector<StudentState>(studentsFeatureKey);
-
-export const { selectAll } = studentAdapter.getSelectors();
 
 const selectStudents = createSelector(selectStudentState, selectAll);
 

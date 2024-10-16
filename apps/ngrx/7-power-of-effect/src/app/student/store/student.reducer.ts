@@ -19,6 +19,3 @@ export const studentReducer = createReducer(
     studentAdapter.setAll(students, state),
   ),
 );
-
-export const { selectIds, selectEntities, selectAll, selectTotal } =
-  studentAdapter.getSelectors();
